@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const FilterDropDownCard = ({subCategory,unSelectAllCheckBox}) => {
+const FilterDropDownCard = ({subCategory}) => {
 
-  const [isChecked,setIsChecked]=useState(false);
+  // const [isChecked,setIsChecked]=useState(false);
+
+  // console.log(); checked={isChecked}
 
   return (
     <div>
-        <input type="checkbox" name="" id="" checked={isChecked}/>
+        <input type="checkbox" name="" id="" />
         <span>{subCategory}</span>
     </div>
   )

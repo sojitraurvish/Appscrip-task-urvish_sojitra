@@ -6,28 +6,23 @@ import FilterDropDownCard from './FilterDropDownCard';
 const FilterDropDownCards = ({category:item}) => {
   const [subDropDown,setSubDropDown]=useState(false);
 
+  // const unSelectAllCheckBox=(e)=>{
 
-  const changeSubDropDown=(e)=>{
-    setSubDropDown(!subDropDown);
-  }
-
-  const unSelectAllCheckBox=(e)=>{
-
-  }
+  // }
   return (<>
       
           <FilterDropDown  >
             
-            <div onClick={(e)=>changeSubDropDown(e)}>
+            <div onClick={()=>setSubDropDown(!subDropDown)}>
               <span>{item.category}</span>
               <img src={subDropDown?`/images/above-arrow-icon.svg` : `/images/down-arrow-icon.svg`} alt=""/>
             </div>
             <div>All</div>
             <SubDropDown subDropDown={subDropDown}>
-              <span onClick={(e)=>unSelectAllCheckBox(e)}>Unselect all</span>
+              <span >Unselect all</span>
               {
                 item.subCategories.map((item)=>(
-                  <FilterDropDownCard key={item.subCategory} subCategory={item} unSelectAllCheckBox={unSelectAllCheckBox}/>
+                  <FilterDropDownCard key={item.subCategory} subCategory={item} />
                 ))
               }
               

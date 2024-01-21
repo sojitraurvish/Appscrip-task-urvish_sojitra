@@ -136,9 +136,14 @@ const HideAndShowFilter=styled.div`
         color: #b4b4bb;
     }
 
+    &:hover{
+        cursor: pointer;
+    }
+
     @media only screen and (min-width:320px) and (max-width:1200px) {
         display: none;
     }
+
     
 `
 

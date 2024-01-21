@@ -8,6 +8,7 @@ import {useDispatch,useSelector} from "react-redux"
 // import products from '../product'
 import ProductSingleCard from '../components/ProductSingleCard'
 
+
 const ShopScreen = () => {
 
   const [sideNav,setSideNav]=useState(true);
@@ -231,6 +232,10 @@ flex-direction: column;
 align-items:center;
 justify-content: center;
 width: 100%;
+
+&:hover{
+  cursor: pointer;
+}
 `
 
 

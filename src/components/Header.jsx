@@ -15,7 +15,7 @@ const Header = () => {
         <MiddleMenu>
           <Section1>Logo</Section1>
           <Section2>
-            <Link as="a" to="/shop"><span>shop</span></Link>
+            <Link as="a" to="/"><span>shop</span></Link>
             <Link as="a" to="/skills"><span>skills</span></Link>
             <Link as="a" to="/stories"><span>stories</span></Link>
             <Link as="a" to="/about"><span>about</span></Link>
@@ -237,7 +237,9 @@ const Li=styled.span`
   margin: 8px 10px;
   a{
     img{
-    
+      &:hover{
+        transform:scale(1.05);
+      }
     }
   }
 

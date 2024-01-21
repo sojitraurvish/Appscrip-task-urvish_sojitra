@@ -13,7 +13,7 @@ const ProductSingleCard = ({products,error,loading}) => {
                 products.map((item)=>(
                     <ProductCard>
                         <div>
-                            <img src={item.image} alt="" />
+                            <img src={item.image} alt={item.image} />
                         
                         </div>
 

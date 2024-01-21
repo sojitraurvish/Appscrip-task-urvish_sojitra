@@ -1,7 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Filters = ({sideNav,changMenu}) => {
+    // const { innerWidth: width, innerHeight: height } = window;
+    
+    // window.DOMContentLoaded=function() {
+    //     if (window.innerWidth <= 1200) {
+    //       document.getElementById("mybock").style.display = 'none';
+    //     } else {
+    //       document.getElementById("mybock").style.display =
+    //    'none';
+    //     }
+    //   }
+
+    useEffect(()=>{
+ 
+        if (window.innerWidth >= 1200) {
+            document.getElementById("mybock").style.display = 'none';
+        } else {
+            document.getElementById("mybock").style.display =
+        'block';
+        }
+
+    },[])
+    
+    // console.log(width);
+    // const { height, width } = useWindowDimensions();
+    window.onresize = function() {
+        if (window.innerWidth >= 1200) {
+          document.getElementById("mybock").style.display = 'none';
+        } else {
+          document.getElementById("mybock").style.display =
+       'block';
+        }
+      }
   return (
     <Container>
 
@@ -20,6 +53,7 @@ const Filters = ({sideNav,changMenu}) => {
             }
         </HideAndShowFilter>
         
+        <Filter  id="mybock" >FILTER</Filter>
         
         <ShowFilter>
             <span>
@@ -51,6 +85,10 @@ const Container=styled.div`
     align-items: center;
     justify-content: space-between;
     position: relative;
+
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+        height: 50px;
+    }
 `
 
 const TotalItems=styled.div`
@@ -62,6 +100,7 @@ const TotalItems=styled.div`
     /* border:2px solid black ; */
     font-size: 18px;
     font-weight: bold;
+    
 
     span{
         &:nth-child(2){
@@ -69,7 +108,15 @@ const TotalItems=styled.div`
         }
     }
 
-    `
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+        display: none;
+        /* span{
+            content: "fksdfj";
+        &:nth-child(2){
+        }
+    } */
+    }
+`
 
 const HideAndShowFilter=styled.div`
     width: 67%;
@@ -89,6 +136,9 @@ const HideAndShowFilter=styled.div`
         color: #b4b4bb;
     }
 
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+        display: none;
+    }
     
 `
 
@@ -144,6 +194,28 @@ const DropDown=styled.div`
 `
 
 
+
+const Filter=styled(Link)`
+    
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+
+        height: 100%;
+        padding: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border:1px solid  #ebebeb;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        width:50%;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+`
+
+
 const ShowFilter=styled.div`
     width: 17%;
     height: 100%;
@@ -178,4 +250,10 @@ const ShowFilter=styled.div`
         }
     }
 
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+        width:50%;
+
+            border:1px solid  #ebebeb;
+    
+    }
 `

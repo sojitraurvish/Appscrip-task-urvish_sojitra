@@ -40,4 +40,40 @@ const TagLineContent=styled.div`
             line-height: 40px;
         }
     }
+
+    /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:696px) and (max-width:1200px) {
+    height: 200px;
+    /* margin-top: 80px; */
+    div{
+        &:nth-child(1){
+            font-size: 35px;
+            
+        }
+        &:nth-child(2){
+          width: 90%;
+            font-size: 19px;
+            line-height: 30px;
+            
+        }
+    }
+    
+  }
+  @media only screen and (min-width:0px) and (max-width:696px) {
+    height: 100px;
+    /* margin-top: 80px; */
+    div{
+        &:nth-child(1){
+            font-size: 20px;
+            
+        }
+        &:nth-child(2){
+            width: 100%;
+            font-size: 11px;
+            line-height: 20px;
+            
+        }
+    }
+    
+  }
 `

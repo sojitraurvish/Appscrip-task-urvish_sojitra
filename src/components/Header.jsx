@@ -70,7 +70,12 @@ const Container=styled.div`
   height: 188px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
-
+/* For Mobile devices: 320px-480px */
+@media only screen and (min-width:320px) and (max-width:1200px) {
+  height: 80px;
+    
+    
+  }
 
 `
 
@@ -91,6 +96,14 @@ const Content=styled.div`
 
 
   }
+
+  /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+      width: 100%;
+  /* height: 30%; */
+    
+    
+  }
 `
 
 
@@ -99,11 +112,18 @@ const Logo=styled.a`
   width: 16%;
 
   height: 70%;
+
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+    
+     width: 30%;
+     padding-left: 10px;
+     
+   }
 `
 
 const MiddleMenu=styled.div`
   width: 100vw;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   height: 80%;
   /* border: 2px solid red; */
   display: flex;
@@ -122,6 +142,14 @@ const MiddleMenu=styled.div`
 
   } */
 
+   /* For Mobile devices: 320px-480px */
+   @media only screen and (min-width:320px) and (max-width:1200px) {
+      /* display: none; */
+  /* height: 30%; */
+    width: 10%;
+    height: 70%;
+    
+  }
   
 `
 const Section1=styled.div`
@@ -173,6 +201,14 @@ const Section2=styled.div`
       }
     }
 
+    /* For Mobile devices: 320px-480px */
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+      display: none;
+  /* height: 30%; */
+    
+    
+  }
+
 `
 
 const Ul=styled.span`
@@ -186,6 +222,13 @@ width: 16%;
   /* box-sizing: border-box; */
   /* width: 100%; */
   /* display:flex; */
+
+  /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+     
+    width: 30%;
+    justify-content: flex-end;
+  }
 `
 
 const Li=styled.span`
@@ -196,6 +239,21 @@ const Li=styled.span`
     img{
     
     }
+  }
+
+  
+
+  /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+     
+    &:nth-child(4){
+    display: none;
+  }
+  &:nth-child(5){
+      display: none;
+    /* border:2px solid red; */
+    }
+    
   }
 `
 

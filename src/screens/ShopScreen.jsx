@@ -127,10 +127,18 @@ const ShopScreen = () => {
 export default ShopScreen
 
 const Container=styled.div`
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background-color: #ffffff;
   width: 100%;
   margin-top: 187px;
+  
+  /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+    
+    margin-top: 80px;
+    
+    
+  }
 `
 
 const Content=styled.div`
@@ -176,6 +184,11 @@ const SideNav=styled.div`
         }
         return "none";
   }};
+
+    /* For Mobile devices: 320px-480px */
+    @media only screen and (min-width:320px) and (max-width:1200px) {
+      display: none;
+    }
 
 
 `
@@ -240,6 +253,11 @@ const ProductsSection=styled.div`
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     justify-content: flex-start;
     align-items: flex-start;
+
+      /* For Mobile devices: 320px-480px */
+  @media only screen and (min-width:320px) and (max-width:1200px) {
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  }
 
   /* div{
     width:${(props)=>{

@@ -18,7 +18,7 @@ const ProductSingleCard = ({products,error,loading}) => {
                         </div>
 
                         <div>
-                            <span>{item.title.substring(0,22)}...</span>
+                            <span>{item.title.substring(0,10)}...</span>
                             <span>
                                 <ProductName><Link as="a" to="">Sign in</Link> or Create an account to see Pricing</ProductName>
                                 {

@@ -176,7 +176,7 @@ const Section1=styled.div`
 
 const Box1=styled.div`
   /* border: 1px solid white; */
-  /* border-bottom: 1px solid white; */
+  border-bottom: 1px solid white;
   width: 100%;
   height: 100%;
   display: flex;
@@ -195,7 +195,7 @@ const Box1=styled.div`
 const Segment1=styled.div`
   /* border: 5px solid red; */
   height: 100%;
-  width:100%;
+  width:60%;
   /* text-align: center; */
   align-items: center;
   display: flex;
@@ -214,6 +214,7 @@ const Segment1=styled.div`
   /* For Mobile devices: 320px-480px */
   @media only screen and (min-width:320px) and (max-width:1200px) {
       border-bottom: 1px solid white;
+      width: 100%;
   }
 
 `
@@ -287,11 +288,14 @@ const Unit2=styled.div`
 const Segment2=styled.div`
 /* border: 2px solid red; */
 height: 100%;
-width:100%;
+width:33%;
 display: flex;
 flex-flow: column;
 justify-content: space-between;
 
+@media only screen and (min-width:320px) and (max-width:1200px) {
+width: 100%;
+}
 `
 
 const Slice1=styled.div`
@@ -320,6 +324,7 @@ div{
       border-bottom: 1px solid white;
       margin-top: 20px;
       padding-bottom: 20px;
+      
   } 
 `
 

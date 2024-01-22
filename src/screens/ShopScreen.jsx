@@ -82,7 +82,7 @@ const ShopScreen = () => {
 
           <MainContent>
 
-            <SideNav show={sideNav.toString()} >
+            <SideNav show={sideNav} >
               <InnerContainer>
 
               <FirstFilter>

@@ -18,7 +18,7 @@ const FilterDropDownCards = ({category:item}) => {
               <img src={subDropDown?`/images/above-arrow-icon.svg` : `/images/down-arrow-icon.svg`} alt=""/>
             </div>
             <div>All</div>
-            <SubDropDown subdropdown={subDropDown.toString()}>
+            <SubDropDown subdropdown={subDropDown}>
               <span >Unselect all</span>
               {
                 item.subCategories.map((item)=>(
@@ -85,7 +85,7 @@ const SubDropDown=styled.div`
   justify-content: flex-start;
   /* display: none; */
   display: ${(props)=>{
-        if(props.subDropDown){
+        if(props.subdropdown){
             return "block";
         }
         return "none";

@@ -18,11 +18,11 @@ const FilterDropDownCards = ({category:item}) => {
               <img src={subDropDown?`/images/above-arrow-icon.svg` : `/images/down-arrow-icon.svg`} alt=""/>
             </div>
             <div>All</div>
-            <SubDropDown subDropDown={subDropDown}>
+            <SubDropDown subdropdown={subDropDown.toString()}>
               <span >Unselect all</span>
               {
                 item.subCategories.map((item)=>(
-                  <FilterDropDownCard key={item.subCategory} subCategory={item} />
+                  <FilterDropDownCard key={item.category} subCategory={item} />
                 ))
               }
               

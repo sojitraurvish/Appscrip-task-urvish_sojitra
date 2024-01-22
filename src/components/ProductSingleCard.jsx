@@ -2,16 +2,43 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const ProductSingleCard = ({products,error,loading}) => {
+const ProductSingleCard = ({localAppProducts,products,error,loading}) => {
 
 
   return (
     <>
+       {/* {error && error } */}
    
         {
-            loading ? "Loading..." : error ? error : (
+            
+            loading ? "Loading..." : error ? (
+              localAppProducts.map((item)=>(
+              <ProductCard key={item.id}>
+                  <div>
+                      <img src={item.image} alt={item.image} />
+                  
+                  </div>
+
+                  <div>
+                      <span>{item.title.substring(0,10)}...</span>
+                      <span>
+                          <ProductName><Link as="a" to="">Sign in</Link> or Create an account to see Pricing</ProductName>
+                          {
+                              item.rating.count===0 
+                              ? (<img src="/images/empty-heart-icon.svg" alt="" />)
+                              : (<img src="/images/fill-heart-icon.svg" alt="" />) 
+                          }
+                        
+                      </span>
+                  </div>
+                  {item.id===1 && <OutOfStock>OUT OF STOCK</OutOfStock>}
+              </ProductCard>
+
+          )))  
+          : (
+                
                 products.map((item)=>(
-                    <ProductCard>
+                    <ProductCard key={item.id}>
                         <div>
                             <img src={item.image} alt={item.image} />
                         

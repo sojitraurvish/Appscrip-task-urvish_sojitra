@@ -5,7 +5,7 @@ import Filters from '../components/Filters'
 import FilterDropDownCards from '../components/FilterDropDownCards'
 import { listProducts } from '../store/actions/productActions'
 import {useDispatch,useSelector} from "react-redux"
-// import products from '../product'
+import localAppProducts from '../product'
 import ProductSingleCard from '../components/ProductSingleCard'
 
 
@@ -82,7 +82,7 @@ const ShopScreen = () => {
 
           <MainContent>
 
-            <SideNav show={sideNav} >
+            <SideNav show={sideNav.toString()} >
               <InnerContainer>
 
               <FirstFilter>
@@ -113,7 +113,7 @@ const ShopScreen = () => {
 
             <ProductsSection>
 
-                  <ProductSingleCard products={products} error={error} loading={loading}/>
+                  <ProductSingleCard localAppProducts={localAppProducts} products={products} error={error} loading={loading}/>
                       
             </ProductsSection>
           </MainContent>
